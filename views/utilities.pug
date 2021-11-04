@@ -5,27 +5,27 @@ block content
   div(class="container-fluid")
         div(class="row")
             -
-                let player = [
+                let utility = [
                     {
-                        "Player_name": "Yuvraj Singh",
-                        "Batting_style": "Left-Handed",
-                        "Purchased_cost": 2000
+                        "Name": "Insta Pot",
+                        "Uses": "Cooking",
+                        "Cost": 200
                     },
                     {
-                        "Player_name": "Dhoni",
-                        "Batting_style": "Right-Handed",
-                        "Purchased_cost": 3000
+                        "Name": "Microoven",
+                        "Uses": "Baking",
+                        "Cost": 300
                     },
                     {
-                        "Player_name": "Sachin",
-                        "Batting_style": "Right-Handed",
-                        "Purchased_cost": 1000
+                        "Name": "Toaster",
+                        "Uses": "Gread Toast",
+                        "Cost": 60
                     },                   
                 ]
-            each c,index in player
-                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Player_name}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Batting_style}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Purchased_cost}
+            each c,index in utility
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Name}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Uses}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.Cost}
 
                 script.                
                       function buy(num)
